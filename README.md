@@ -18,6 +18,7 @@ $ maven clean package
 $ ${JDG_HOME}/bin/ispn-cli.sh -c --controller=localhost:9990
 [] deploy manage-cache-task/target/manage-cache-task.jar
 [] deploy list-cache-task/target/list-cache-task.jar
+~~~
 
 ## Usage
 
