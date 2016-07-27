@@ -1,6 +1,6 @@
 # hotrod-server-tasks
 
-JDG7 has a remote task execution from Hot Rod clients. This module contains two deployable ServerTask implementations.
+JDG7 has a new feature called remote task execution from Hot Rod clients. This module contains two deployable ServerTask implementations.
 
 * manage-cache-task
 * list-cache-task
@@ -9,7 +9,7 @@ Using the manage-cache-task, Hot Rod client can create or remove cache definitio
 
 ## Prerequisite
 
-* Red Hat JBoss Data Grid 7.0.0 Beta Server
+* Red Hat JBoss Data Grid 7.0.0 Server
 
 After starting JDG 7 servers, you must build the server task modules and deploy these on all JDG server of the target cluster.
 
