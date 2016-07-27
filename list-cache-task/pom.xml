@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<version.infinispan>8.3.0.ER4-redhat-1</version.infinispan>     <!-- JDG 7.0.0.Beta -->
+		<version.infinispan>8.3.0.Final-redhat-1</version.infinispan>     <!-- JDG 7.0.0 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
