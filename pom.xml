@@ -12,6 +12,7 @@
     <modules>
 	<module>manage-cache-task</module>
 	<module>list-cache-task</module>
+	<module>mass-indexer-start-task</module>
     </modules>
 
 </project>

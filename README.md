@@ -4,8 +4,13 @@ JDG7 has a new feature called remote task execution from Hot Rod clients. This m
 
 * manage-cache-task
 * list-cache-task
+* mass-indexer-start-task
 
-Using the manage-cache-task, Hot Rod client can create or remove cache definitions dynamically. The list-cache-task provides the same functionality of  EmbeddedCacheManager.getCacheNames() for Hot Rod clients.
+Using the manage-cache-task, Hot Rod client can create or remove cache definitions dynamically.
+
+The list-cache-task provides the same functionality of  EmbeddedCacheManager.getCacheNames() for Hot Rod clients.
+
+The mass-indexer-start-task calls MassIndexer.startAsync().
 
 ## Prerequisite
 
@@ -16,8 +21,9 @@ After starting JDG 7 servers, you must build the server task modules and deploy 
 ~~~
 $ maven clean package
 $ ${JDG_HOME}/bin/ispn-cli.sh -c --controller=localhost:9990
-[] deploy manage-cache-task/target/manage-cache-task.jar
-[] deploy list-cache-task/target/list-cache-task.jar
+$ cp manage-cache-task/target/manage-cache-task.jar ${JDG_HOME}/deployments/
+$ cp list-cache-task/target/list-cache-task.jar ${JDG_HOME}/deployments/
+$ cp mass-indexer-start-task/target/mass-indexer-start-task.jar ${JDG_HOME}/deployments/
 ~~~
 
 ## Usage
@@ -43,3 +49,10 @@ To obtain the current cache name list, execute ServerTask "list-cache" without a
 ~~~
 Set<String> cacheNames = cache.execute("list-cache", null);
 ~~~
+
+To call MassIndexer.startAsync(), execute ServerTask "mass-indexer-start" without any parameter. The target cache must be configured for indexing.
+
+~~~
+cache.execute("mass-indexer-start", null);
+~~~
+
