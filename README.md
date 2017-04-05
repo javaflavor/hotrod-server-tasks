@@ -21,9 +21,9 @@ After starting JDG 7 servers, you must build the server task modules and deploy 
 ~~~
 $ maven clean package
 $ ${JDG_HOME}/bin/ispn-cli.sh -c --controller=localhost:9990
-$ cp manage-cache-task/target/manage-cache-task.jar ${JDG_HOME}/deployments/
-$ cp list-cache-task/target/list-cache-task.jar ${JDG_HOME}/deployments/
-$ cp mass-indexer-start-task/target/mass-indexer-start-task.jar ${JDG_HOME}/deployments/
+[] deploy manage-cache-task/target/manage-cache-task.jar
+[] deploy list-cache-task/target/list-cache-task.jar
+[] deploy mass-indexer-start-task/target/mass-indexer-start-task.jar
 ~~~
 
 ## Usage
